@@ -1,0 +1,45 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ScoreManagementSystem - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/ScoreManagementSystem.res" /d "_DEBUG" /d "_AFXDLL" "D:\C++程序\GitManager\ScoreManagementSystem\ScoreManagementSystem\ScoreManagementSystem.rc"" 
+Creating temporary file "C:\Users\xjc\AppData\Local\Temp\RSP4C93.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/ScoreManagementSystem.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\C++程序\GitManager\ScoreManagementSystem\ScoreManagementSystem\AddMessageDlg.cpp"
+"D:\C++程序\GitManager\ScoreManagementSystem\ScoreManagementSystem\DELMessageDig.cpp"
+"D:\C++程序\GitManager\ScoreManagementSystem\ScoreManagementSystem\SELECTMessageDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\xjc\AppData\Local\Temp\RSP4C93.tmp" 
+Creating temporary file "C:\Users\xjc\AppData\Local\Temp\RSP4C94.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/ScoreManagementSystem.pdb" /debug /machine:I386 /out:"Debug/ScoreManagementSystem.exe" /pdbtype:sept 
+".\Debug\ScoreManagementSystem.obj"
+".\Debug\ScoreManagementSystemDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\ScoreManagementSystem.res"
+".\Debug\AddMessageDlg.obj"
+".\Debug\DELMessageDig.obj"
+".\Debug\SELECTMessageDlg.obj"
+]
+Creating command line "link.exe @C:\Users\xjc\AppData\Local\Temp\RSP4C94.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+AddMessageDlg.cpp
+DELMessageDig.cpp
+SELECTMessageDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+ScoreManagementSystem.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
