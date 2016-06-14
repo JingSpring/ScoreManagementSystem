@@ -19,7 +19,16 @@ public:
 // Dialog Data
 	//{{AFX_DATA(CAddMessageDlg)
 	enum { IDD = IDD_DIALOG_ADD };
-		// NOTE: the ClassWizard will add data members here
+	CString	m_strName;                        //姓名
+	CString	m_strID;                         //学号
+	CString	m_strClass;                     //班级
+	CString	m_strGrade;                    //年级
+	float	m_fChinese;                   //语文成绩
+	float	m_fch;                       //化学成绩
+	float	m_fEnglish;                 //英语成绩
+	float	m_fg;                      //生物成绩
+	float	m_fMath;                  //数学成绩
+	float	m_fph;                   //物理成绩
 	//}}AFX_DATA
 
 

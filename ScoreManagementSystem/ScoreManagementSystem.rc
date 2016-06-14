@@ -104,7 +104,7 @@ BEGIN
     LTEXT           "成绩统计：",IDC_STATIC,11,191,41,8
     CONTROL         "List2",IDC_LIST_DOWN,"SysListView32",LVS_REPORT | 
                     WS_BORDER | WS_TABSTOP,297,209,289,144
-    LTEXT           "成绩统计：",IDC_STATIC,301,190,41,8
+    LTEXT           "不及格情况统计：",IDC_STATIC,301,190,74,8
     LTEXT           "学生成绩全部记录：",IDC_STATIC,11,22,77,8
 END
 

@@ -13,13 +13,13 @@ Class2=CScoreManagementSystemDlg
 Class3=CAboutDlg
 
 ResourceCount=6
-Resource1=IDD_SCOREMANAGEMENTSYSTEM_DIALOG
+Resource1=IDD_DIALOG_DEL
 Resource2=IDR_MAINFRAME
-Resource3=IDD_DIALOG_DEL
+Resource3=IDD_ABOUTBOX
 Class4=CAddMessageDlg
 Resource4=IDD_DIALOG_ADD
 Class5=CDELMessageDig
-Resource5=IDD_ABOUTBOX
+Resource5=IDD_SCOREMANAGEMENTSYSTEM_DIALOG
 Class6=CSELECTMessageDlg
 Resource6=IDD_DIALOG_SELECT
 
@@ -103,7 +103,8 @@ HeaderFile=AddMessageDlg.h
 ImplementationFile=AddMessageDlg.cpp
 BaseClass=CDialog
 Filter=D
-LastObject=CAddMessageDlg
+LastObject=IDC_EDIT_P
+VirtualFilter=dWC
 
 [DLG:IDD_DIALOG_DEL]
 Type=1

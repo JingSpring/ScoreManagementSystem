@@ -6,14 +6,7 @@
 --------------------Configuration: ScoreManagementSystem - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\xjc\AppData\Local\Temp\RSPEA32.tmp" with contents
-[
-/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/ScoreManagementSystem.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
-"D:\C++³ÌÐò\GitManager\ScoreManagementSystem\ScoreManagementSystem\ScoreManagementSystem.cpp"
-"D:\C++³ÌÐò\GitManager\ScoreManagementSystem\ScoreManagementSystem\ScoreManagementSystemDlg.cpp"
-]
-Creating command line "cl.exe @C:\Users\xjc\AppData\Local\Temp\RSPEA32.tmp" 
-Creating temporary file "C:\Users\xjc\AppData\Local\Temp\RSPEA33.tmp" with contents
+Creating temporary file "C:\Users\xjc\AppData\Local\Temp\RSPD2CD.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/ScoreManagementSystem.pdb" /debug /machine:I386 /out:"Debug/ScoreManagementSystem.exe" /pdbtype:sept 
 ".\Debug\AddMessageDlg.obj"
@@ -24,13 +17,8 @@ Creating temporary file "C:\Users\xjc\AppData\Local\Temp\RSPEA33.tmp" with conte
 ".\Debug\StdAfx.obj"
 ".\Debug\ScoreManagementSystem.res"
 ]
-Creating command line "link.exe @C:\Users\xjc\AppData\Local\Temp\RSPEA33.tmp"
+Creating command line "link.exe @C:\Users\xjc\AppData\Local\Temp\RSPD2CD.tmp"
 <h3>Output Window</h3>
-Compiling...
-ScoreManagementSystemDlg.cpp
-Generating Code...
-Skipping... (no relevant changes detected)
-ScoreManagementSystem.cpp
 Linking...
 
 

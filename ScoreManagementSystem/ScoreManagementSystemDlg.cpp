@@ -76,7 +76,9 @@ void CScoreManagementSystemDlg::DoDataExchange(CDataExchange* pDX)
 {
 	CDialog::DoDataExchange(pDX);
 	//{{AFX_DATA_MAP(CScoreManagementSystemDlg)
-		// NOTE: the ClassWizard will add DDX and DDV calls here
+	DDX_Control(pDX, IDC_LIST_DOWN, m_downList);
+	DDX_Control(pDX, IDC_LIST_SCORE, m_scoreList);
+	DDX_Control(pDX, IDC_LIST_STUDENT, m_studentList);
 	//}}AFX_DATA_MAP
 }
 
@@ -122,7 +124,23 @@ BOOL CScoreManagementSystemDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 	
 	// TODO: Add extra initialization here
-	
+	//设置列表表头
+	char* studentTitle[13] = {"排名","姓名","学号","班级","年级","语文成绩","数学成绩","英语成绩","物理成绩","化学成绩","生物成绩","理综成绩","总分成绩"};
+	char* ScoreStatistics[8] = {"语文平均分","数学平均分","英语平均分","物理平均分","化学平均分","生物平均分","理综平均分","总平均分"};
+	char* SituationTitle[6] = {"姓名","学号","班级","年级","不及格科目","分数"};
+	for(int nCol=0;nCol<13;nCol++)
+	{
+		m_studentList.InsertColumn(nCol,studentTitle[nCol],LVCFMT_CENTER,76,20);
+	}
+	for(int sCol=0;sCol<8;sCol++)
+	{
+		m_scoreList.InsertColumn(sCol,ScoreStatistics[sCol],LVCFMT_CENTER,76,20);
+	}
+	for(int tCol=0;tCol<6;tCol++)
+	{
+		m_downList.InsertColumn(tCol,SituationTitle[tCol],LVCFMT_CENTER,76,20);
+	}
+
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 

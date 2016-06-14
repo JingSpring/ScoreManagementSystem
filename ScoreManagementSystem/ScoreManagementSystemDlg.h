@@ -24,6 +24,7 @@ public:
 		stuScore[3]=s4;
 		stuScore[4]=s5;
 		stuScore[5]=s6;
+        IntegratedScience=s4+s5+s6;
 	}
 	CStudentMessage(){};           //构造函数
 	~CStudentMessage(){};         //析构函数
@@ -31,6 +32,7 @@ public:
 	CString stuID;              //学号
 	CString stuClass;          //班别
 	float  stuScore[6];       //各科成绩
+	float IntegratedScience;  //理综成绩
 };
 class CScoreManagementSystemDlg : public CDialog
 {
@@ -41,7 +43,9 @@ public:
 // Dialog Data
 	//{{AFX_DATA(CScoreManagementSystemDlg)
 	enum { IDD = IDD_SCOREMANAGEMENTSYSTEM_DIALOG };
-		// NOTE: the ClassWizard will add data members here
+	CListCtrl	m_downList;
+	CListCtrl	m_scoreList;
+	CListCtrl	m_studentList;
 	//}}AFX_DATA
 
 	// ClassWizard generated virtual function overrides
