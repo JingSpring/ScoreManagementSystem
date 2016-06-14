@@ -4,6 +4,9 @@
 #include "stdafx.h"
 #include "ScoreManagementSystem.h"
 #include "ScoreManagementSystemDlg.h"
+#include "AddMessageDlg.h"
+#include "DELMessageDig.h"
+#include "SELECTMessageDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -82,6 +85,9 @@ BEGIN_MESSAGE_MAP(CScoreManagementSystemDlg, CDialog)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BUTTON_ADD, OnButtonAdd)
+	ON_BN_CLICKED(IDC_BUTTON_DEL, OnButtonDel)
+	ON_BN_CLICKED(IDC_BUTTON_SELECT, OnButtonSelect)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -167,4 +173,25 @@ void CScoreManagementSystemDlg::OnPaint()
 HCURSOR CScoreManagementSystemDlg::OnQueryDragIcon()
 {
 	return (HCURSOR) m_hIcon;
+}
+//增加
+void CScoreManagementSystemDlg::OnButtonAdd() 
+{
+	// TODO: Add your control notification handler code here
+	CAddMessageDlg addDlg;
+	addDlg.DoModal();          //弹出增加学生成绩对话框
+}
+//删除
+void CScoreManagementSystemDlg::OnButtonDel() 
+{
+	// TODO: Add your control notification handler code here
+	CDELMessageDig delDlg;
+	delDlg.DoModal();
+}
+//查找
+void CScoreManagementSystemDlg::OnButtonSelect() 
+{
+	// TODO: Add your control notification handler code here
+	CSELECTMessageDlg selectDlg;
+	selectDlg.DoModal();
 }

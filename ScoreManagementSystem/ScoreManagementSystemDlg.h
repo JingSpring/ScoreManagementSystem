@@ -60,6 +60,9 @@ protected:
 	afx_msg void OnSysCommand(UINT nID, LPARAM lParam);
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
+	afx_msg void OnButtonAdd();
+	afx_msg void OnButtonDel();
+	afx_msg void OnButtonSelect();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };
