@@ -44,7 +44,7 @@ protected:
 
 	// Generated message map functions
 	//{{AFX_MSG(CAddMessageDlg)
-		// NOTE: the ClassWizard will add member functions here
+	virtual void OnOK();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

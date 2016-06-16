@@ -7,6 +7,7 @@
 #include "AddMessageDlg.h"
 #include "DELMessageDig.h"
 #include "SELECTMessageDlg.h"
+#include "CStudentMessage.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -196,8 +197,26 @@ HCURSOR CScoreManagementSystemDlg::OnQueryDragIcon()
 void CScoreManagementSystemDlg::OnButtonAdd() 
 {
 	// TODO: Add your control notification handler code here
+	int i=2;
 	CAddMessageDlg addDlg;
-	addDlg.DoModal();          //弹出增加学生成绩对话框
+	CStudentMessage pStudent;
+	if(IDOK==addDlg.DoModal())          //弹出增加学生成绩对话框
+	{ 
+
+		/*
+        2016.6.17星期五，已经可以实现对话框之间的传值及添加数据到文件中，但显示有问题（文件也出现乱码），需要调整
+		*/
+
+	    CString str;
+		str.Format("%d  %s  %s  %s  %s  %f  %f  %f  %f  %f  %f  %f  %f",i,addDlg.m_strName,addDlg.m_strID,addDlg.m_strClass,addDlg.m_strGrade,addDlg.m_fChinese,addDlg.m_fMath,addDlg.m_fEnglish,addDlg.m_fph,addDlg.m_fch,addDlg.m_fg,pStudent.IntegratedScience,pStudent.TotalScore);
+		while(i<13)
+		{
+			m_studentList.InsertColumn(i,str,LVCFMT_CENTER,76,20);
+			i++;
+		}
+		
+	}
+	UpdateData(FALSE);
 }
 //删除
 void CScoreManagementSystemDlg::OnButtonDel() 

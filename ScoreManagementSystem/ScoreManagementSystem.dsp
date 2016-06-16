@@ -94,6 +94,10 @@ SOURCE=.\AddMessageDlg.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\CStudentMessage.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\DELMessageDig.cpp
 # End Source File
 # Begin Source File
@@ -124,6 +128,10 @@ SOURCE=.\StdAfx.cpp
 # Begin Source File
 
 SOURCE=.\AddMessageDlg.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\CStudentMessage.h
 # End Source File
 # Begin Source File
 

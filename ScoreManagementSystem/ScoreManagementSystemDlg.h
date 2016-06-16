@@ -1,6 +1,7 @@
 // ScoreManagementSystemDlg.h : header file
 //
 
+
 #if !defined(AFX_SCOREMANAGEMENTSYSTEMDLG_H__1BCCC462_E7CF_4560_AB96_92E8E0C94DAC__INCLUDED_)
 #define AFX_SCOREMANAGEMENTSYSTEMDLG_H__1BCCC462_E7CF_4560_AB96_92E8E0C94DAC__INCLUDED_
 
@@ -10,30 +11,7 @@
 
 /////////////////////////////////////////////////////////////////////////////
 // CScoreManagementSystemDlg dialog
-class CStudentMessage
-{
-public:
-    CStudentMessage(CString name,CString id,CString clas,float s1,float s2,float s3,float s4,float s5,float s6)
-	{
-		stuName=name;
-		stuID=id;
-		stuClass=clas;
-		stuScore[0]=s1;
-		stuScore[1]=s2;
-		stuScore[2]=s3;
-		stuScore[3]=s4;
-		stuScore[4]=s5;
-		stuScore[5]=s6;
-        IntegratedScience=s4+s5+s6;
-	}
-	CStudentMessage(){};           //构造函数
-	~CStudentMessage(){};         //析构函数
-	CString stuName;             //学生姓名
-	CString stuID;              //学号
-	CString stuClass;          //班别
-	float  stuScore[6];       //各科成绩
-	float IntegratedScience;  //理综成绩
-};
+
 class CScoreManagementSystemDlg : public CDialog
 {
 // Construction

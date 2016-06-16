@@ -13,13 +13,13 @@ Class2=CScoreManagementSystemDlg
 Class3=CAboutDlg
 
 ResourceCount=6
-Resource1=IDD_DIALOG_DEL
+Resource1=IDD_ABOUTBOX
 Resource2=IDR_MAINFRAME
-Resource3=IDD_ABOUTBOX
+Resource3=IDD_SCOREMANAGEMENTSYSTEM_DIALOG
 Class4=CAddMessageDlg
-Resource4=IDD_DIALOG_ADD
+Resource4=IDD_DIALOG_DEL
 Class5=CDELMessageDig
-Resource5=IDD_SCOREMANAGEMENTSYSTEM_DIALOG
+Resource5=IDD_DIALOG_ADD
 Class6=CSELECTMessageDlg
 Resource6=IDD_DIALOG_SELECT
 
