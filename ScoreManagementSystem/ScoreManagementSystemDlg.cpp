@@ -8,6 +8,7 @@
 #include "DELMessageDig.h"
 #include "SELECTMessageDlg.h"
 #include "CStudentMessage.h"
+#include "ALTERDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -91,6 +92,8 @@ BEGIN_MESSAGE_MAP(CScoreManagementSystemDlg, CDialog)
 	ON_BN_CLICKED(IDC_BUTTON_ADD, OnButtonAdd)
 	ON_BN_CLICKED(IDC_BUTTON_DEL, OnButtonDel)
 	ON_BN_CLICKED(IDC_BUTTON_SELECT, OnButtonSelect)
+	ON_BN_CLICKED(IDC_BUTTON_ALTER, OnButtonAlter)
+	ON_BN_CLICKED(IDC_BUTTON_SHOW, OnButtonShow)
 	//}}AFX_MSG_MAP
 END_MESSAGE_MAP()
 
@@ -135,11 +138,11 @@ BOOL CScoreManagementSystemDlg::OnInitDialog()
 	}
 	for(int sCol=0;sCol<8;sCol++)
 	{
-		m_scoreList.InsertColumn(sCol,ScoreStatistics[sCol],LVCFMT_CENTER,76,20);
+		m_scoreList.InsertColumn(sCol,ScoreStatistics[sCol],LVCFMT_CENTER,110,40);
 	}
 	for(int tCol=0;tCol<6;tCol++)
 	{
-		m_downList.InsertColumn(tCol,SituationTitle[tCol],LVCFMT_CENTER,76,20);
+		m_downList.InsertColumn(tCol,SituationTitle[tCol],LVCFMT_CENTER,145,30);
 	}
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
@@ -197,26 +200,11 @@ HCURSOR CScoreManagementSystemDlg::OnQueryDragIcon()
 void CScoreManagementSystemDlg::OnButtonAdd() 
 {
 	// TODO: Add your control notification handler code here
-	int i=2;
-	CAddMessageDlg addDlg;
-	CStudentMessage pStudent;
-	if(IDOK==addDlg.DoModal())          //弹出增加学生成绩对话框
-	{ 
-
-		/*
-        2016.6.17星期五，已经可以实现对话框之间的传值及添加数据到文件中，但显示有问题（文件也出现乱码），需要调整
-		*/
-
-	    CString str;
-		str.Format("%d  %s  %s  %s  %s  %f  %f  %f  %f  %f  %f  %f  %f",i,addDlg.m_strName,addDlg.m_strID,addDlg.m_strClass,addDlg.m_strGrade,addDlg.m_fChinese,addDlg.m_fMath,addDlg.m_fEnglish,addDlg.m_fph,addDlg.m_fch,addDlg.m_fg,pStudent.IntegratedScience,pStudent.TotalScore);
-		while(i<13)
-		{
-			m_studentList.InsertColumn(i,str,LVCFMT_CENTER,76,20);
-			i++;
-		}
-		
-	}
-	UpdateData(FALSE);
+	 CAddMessageDlg addDlg;
+    if(IDOK==addDlg.DoModal())          //弹出增加学生成绩对话框
+    {
+        operationFile();
+    }
 }
 //删除
 void CScoreManagementSystemDlg::OnButtonDel() 
@@ -232,3 +220,77 @@ void CScoreManagementSystemDlg::OnButtonSelect()
 	CSELECTMessageDlg selectDlg;
 	selectDlg.DoModal();
 }
+//修改
+void CScoreManagementSystemDlg::OnButtonAlter() 
+{
+	// TODO: Add your control notification handler code here
+	CALTERDlg alterDlg;
+	alterDlg.DoModal();
+}
+//排序
+void CScoreManagementSystemDlg::OnButtonShow() 
+{
+	// TODO: Add your control notification handler code here
+	operationFile();
+}
+
+void CScoreManagementSystemDlg::operationFile()
+{
+	m_studentList.DeleteAllItems();
+    int i;
+    CString str;
+    CString str1;
+    CString str2;
+    CString str3;
+    CString str4;
+    CString str5;
+    CString str6;
+    CString str7;
+    CString str8;
+    CString str9;
+    CString str10;
+    CString str11;
+    CString str12;
+    fstream file("student.txt",ios::in|ios::nocreate);
+    if(!file)
+    {
+        MessageBox(NULL,"文件无法打开!",0);
+        return;
+    }
+    i=0;
+    while(!file.eof())
+    {
+        CStudentMessage stu;
+        file>>stu;
+        str.Format("%d",i+1);
+        str1.Format("%s",stu.stuName);
+        str2.Format("%s",stu.stuID);
+        str3.Format("%s",stu.stuClass);
+        str4.Format("%s",stu.stuGrade);
+        str5.Format("%0.1f",stu.score1);
+        str6.Format("%0.1f",stu.score2);
+        str7.Format("%0.1f",stu.score3);
+        str8.Format("%0.1f",stu.score4);
+        str9.Format("%0.1f",stu.score5);
+        str10.Format("%0.1f",stu.score6);
+        str11.Format("%0.1f",stu.IntegratedScience);
+        str12.Format("%0.1f",stu.TotalScore);
+        m_studentList.InsertItem(i,str);
+        m_studentList.SetItemText(i,1,str1);
+        m_studentList.SetItemText(i,2,str2);
+        m_studentList.SetItemText(i,3,str3);
+        m_studentList.SetItemText(i,4,str4);
+        m_studentList.SetItemText(i,5,str5);
+        m_studentList.SetItemText(i,6,str6);
+        m_studentList.SetItemText(i,7,str7);
+        m_studentList.SetItemText(i,8,str8);
+        m_studentList.SetItemText(i,9,str9);
+        m_studentList.SetItemText(i,10,str10);
+        m_studentList.SetItemText(i,11,str11);
+        m_studentList.SetItemText(i,12,str12);
+        i++;
+    }
+    UpdateData(FALSE);
+}
+
+

@@ -6,13 +6,17 @@
 --------------------Configuration: ScoreManagementSystem - Win32 Debug--------------------
 </h3>
 <h3>Command Lines</h3>
-Creating temporary file "C:\Users\xjc\AppData\Local\Temp\RSP29F3.tmp" with contents
+Creating command line "rc.exe /l 0x804 /fo"Debug/ScoreManagementSystem.res" /d "_DEBUG" /d "_AFXDLL" "D:\C++程序\GitManager\ScoreManagementSystem\ScoreManagementSystem\ScoreManagementSystem.rc"" 
+Creating temporary file "C:\Users\xjc\AppData\Local\Temp\RSPE2B9.tmp" with contents
 [
 /nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/ScoreManagementSystem.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\C++程序\GitManager\ScoreManagementSystem\ScoreManagementSystem\AddMessageDlg.cpp"
+"D:\C++程序\GitManager\ScoreManagementSystem\ScoreManagementSystem\CStudentMessage.cpp"
+"D:\C++程序\GitManager\ScoreManagementSystem\ScoreManagementSystem\ScoreManagementSystem.cpp"
 "D:\C++程序\GitManager\ScoreManagementSystem\ScoreManagementSystem\ScoreManagementSystemDlg.cpp"
 ]
-Creating command line "cl.exe @C:\Users\xjc\AppData\Local\Temp\RSP29F3.tmp" 
-Creating temporary file "C:\Users\xjc\AppData\Local\Temp\RSP29F4.tmp" with contents
+Creating command line "cl.exe @C:\Users\xjc\AppData\Local\Temp\RSPE2B9.tmp" 
+Creating temporary file "C:\Users\xjc\AppData\Local\Temp\RSPE2BA.tmp" with contents
 [
 /nologo /subsystem:windows /incremental:yes /pdb:"Debug/ScoreManagementSystem.pdb" /debug /machine:I386 /out:"Debug/ScoreManagementSystem.exe" /pdbtype:sept 
 ".\Debug\AddMessageDlg.obj"
@@ -23,11 +27,18 @@ Creating temporary file "C:\Users\xjc\AppData\Local\Temp\RSP29F4.tmp" with conte
 ".\Debug\SELECTMessageDlg.obj"
 ".\Debug\StdAfx.obj"
 ".\Debug\ScoreManagementSystem.res"
+".\Debug\ALTERDlg.obj"
 ]
-Creating command line "link.exe @C:\Users\xjc\AppData\Local\Temp\RSP29F4.tmp"
+Creating command line "link.exe @C:\Users\xjc\AppData\Local\Temp\RSPE2BA.tmp"
 <h3>Output Window</h3>
+Compiling resources...
 Compiling...
+AddMessageDlg.cpp
+CStudentMessage.cpp
 ScoreManagementSystemDlg.cpp
+Generating Code...
+Skipping... (no relevant changes detected)
+ScoreManagementSystem.cpp
 Linking...
 
 

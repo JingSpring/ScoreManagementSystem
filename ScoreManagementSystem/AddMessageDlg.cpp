@@ -74,34 +74,55 @@ END_MESSAGE_MAP()
 void CAddMessageDlg::OnOK() 
 {
 	// TODO: Add extra validation here
-	int rank=0;
-	rank++;
-	UpdateData();
-	m_strName.TrimLeft();
-	m_strName.TrimRight();
-	m_strID.TrimLeft();
-	m_strID.TrimRight();
-	if(m_strName.IsEmpty())
-	{
-		MessageBox("姓名不能为空！","提示");
-		return;
-	}
-	CAddMessageDlg addDlg;
-	CStudentMessage pStudent;
-	pStudent.stuName=addDlg.m_strName;
-    pStudent.stuID=addDlg.m_strID;
-    pStudent.stuClass=addDlg.m_strClass;
-	pStudent.stuGrade=addDlg.m_strGrade;
-	pStudent.score1=addDlg.m_fChinese;
-    pStudent.score2=addDlg.m_fMath;
-	pStudent.score3=addDlg.m_fEnglish;
-	pStudent.score4=addDlg.m_fph;
-	pStudent.score5=addDlg.m_fch;
-	pStudent.score6=addDlg.m_fg;
-	theStu.Add(pStudent);
-	//CString str;
-	//str.Format("%d  %s  %s  %s  %s  %f  %f  %f  %f  %f  %f  %f  %f",rank,addDlg.m_strName,addDlg.m_strID,addDlg.m_strClass,addDlg.m_strGrade,addDlg.m_fChinese,addDlg.m_fMath,addDlg.m_fEnglish,addDlg.m_fph,addDlg.m_fch,addDlg.m_fg,pStudent.IntegratedScience,pStudent.TotalScore);
-	//char* data[13] = {(char *)&rank,(char *)&addDlg.m_strName,(char *)&addDlg.m_strID,(char *)&addDlg.m_strClass,(char *)&addDlg.m_strGrade,(char *)&addDlg.m_fChinese,(char *)&addDlg.m_fMath,addDlg.m_fEnglish,addDlg.m_fph,addDlg.m_fch,addDlg.m_fg,pStudent.IntegratedScience,pStudent.TotalScore};
-	//scoreDlg.m_studentList.InsertColumn(rank,(char *)&str,LVCFMT_CENTER,76,20);
-	CDialog::OnOK();
+    UpdateData();
+    m_strName.TrimLeft();
+    m_strName.TrimRight();
+    m_strID.TrimLeft();
+    m_strID.TrimRight();
+    if(m_strName.IsEmpty())
+    {
+        MessageBox("姓名不能为空！","提示");
+        return;
+    }
+    if(m_strID.IsEmpty())
+    {
+        MessageBox("学号不能为空！","提示");
+        return;
+    }
+    if(m_strClass.IsEmpty())
+    {
+        MessageBox("班级不能为空！","提示");
+        return;
+    }
+    if(m_strGrade.IsEmpty())
+    {
+        MessageBox("年级不能为空！","提示");
+        return;
+    }
+    CStudentMessage pStudent;
+    CStudentMessage stu;
+    strncpy(pStudent.stuID,(LPCTSTR)m_strID,sizeof(pStudent.stuID));
+    if(theStu.FindSame(pStudent.stuID,stu)>=0)
+    {
+        MessageBox("该学生成绩已存在！！","警告",0);
+        return;
+    }
+    else
+    {
+        strncpy(pStudent.stuName,(LPCTSTR)m_strName,sizeof(pStudent.stuName));
+        strncpy(pStudent.stuID,(LPCTSTR)m_strID,sizeof(pStudent.stuID));
+        strncpy(pStudent.stuClass,(LPCTSTR)m_strClass,sizeof(pStudent.stuClass));
+        strncpy(pStudent.stuGrade,(LPCTSTR)m_strGrade,sizeof(pStudent.stuGrade));
+        
+        pStudent.score1=m_fChinese;
+        pStudent.score2=m_fMath;
+        pStudent.score3=m_fEnglish;
+        pStudent.score4=m_fph;
+        pStudent.score5=m_fch;
+        pStudent.score6=m_fg;
+        pStudent.IntegratedScience=(float)(m_fph+m_fch+m_fg);
+        pStudent.TotalScore=(float)(m_fChinese+m_fMath+m_fEnglish+m_fph+m_fch+m_fg);
+        theStu.Add(pStudent);
+    }
+    CDialog::OnOK();
 }

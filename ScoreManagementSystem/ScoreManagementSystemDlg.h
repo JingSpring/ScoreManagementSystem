@@ -16,6 +16,7 @@ class CScoreManagementSystemDlg : public CDialog
 {
 // Construction
 public:
+	void operationFile();
 	CScoreManagementSystemDlg(CWnd* pParent = NULL);	// standard constructor
 
 // Dialog Data
@@ -45,6 +46,8 @@ protected:
 	afx_msg void OnButtonAdd();
 	afx_msg void OnButtonDel();
 	afx_msg void OnButtonSelect();
+	afx_msg void OnButtonAlter();
+	afx_msg void OnButtonShow();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

@@ -7,21 +7,23 @@ LastTemplate=CDialog
 NewFileInclude1=#include "stdafx.h"
 NewFileInclude2=#include "ScoreManagementSystem.h"
 
-ClassCount=6
+ClassCount=7
 Class1=CScoreManagementSystemApp
 Class2=CScoreManagementSystemDlg
 Class3=CAboutDlg
 
-ResourceCount=6
-Resource1=IDD_ABOUTBOX
+ResourceCount=7
+Resource1=IDD_DIALOG_ADD
 Resource2=IDR_MAINFRAME
-Resource3=IDD_SCOREMANAGEMENTSYSTEM_DIALOG
+Resource3=IDD_ABOUTBOX
 Class4=CAddMessageDlg
-Resource4=IDD_DIALOG_DEL
+Resource4=IDD_SCOREMANAGEMENTSYSTEM_DIALOG
 Class5=CDELMessageDig
-Resource5=IDD_DIALOG_ADD
+Resource5=IDD_DIALOG_DEL
 Class6=CSELECTMessageDlg
 Resource6=IDD_DIALOG_SELECT
+Class7=CALTERDlg
+Resource7=IDD_DIALOG_ALTER
 
 [CLS:CScoreManagementSystemApp]
 Type=0
@@ -34,7 +36,7 @@ Type=0
 HeaderFile=ScoreManagementSystemDlg.h
 ImplementationFile=ScoreManagementSystemDlg.cpp
 Filter=D
-LastObject=IDC_LIST_STUDENT
+LastObject=IDC_BUTTON_SHOW
 BaseClass=CDialog
 VirtualFilter=dWC
 
@@ -58,17 +60,17 @@ Type=1
 Class=CScoreManagementSystemDlg
 ControlCount=12
 Control1=IDOK,button,1342275585
-Control2=IDCANCEL,button,1342242816
-Control3=IDC_LIST_STUDENT,SysListView32,1350631425
-Control4=IDC_BUTTON_SHOW,button,1342275584
-Control5=IDC_BUTTON_ADD,button,1342275584
-Control6=IDC_BUTTON_DEL,button,1342275584
-Control7=IDC_LIST_SCORE,SysListView32,1350631425
-Control8=IDC_BUTTON_SELECT,button,1342275584
-Control9=IDC_STATIC,static,1342308352
-Control10=IDC_LIST_DOWN,SysListView32,1350631425
+Control2=IDC_LIST_STUDENT,SysListView32,1350631425
+Control3=IDC_BUTTON_SHOW,button,1342275584
+Control4=IDC_BUTTON_ADD,button,1342275584
+Control5=IDC_BUTTON_DEL,button,1342275584
+Control6=IDC_LIST_SCORE,SysListView32,1350631425
+Control7=IDC_BUTTON_SELECT,button,1342275584
+Control8=IDC_STATIC,static,1342308352
+Control9=IDC_LIST_DOWN,SysListView32,1350631425
+Control10=IDC_STATIC,static,1342308352
 Control11=IDC_STATIC,static,1342308352
-Control12=IDC_STATIC,static,1342308352
+Control12=IDC_BUTTON_ALTER,button,1342275584
 
 [DLG:IDD_DIALOG_ADD]
 Type=1
@@ -139,4 +141,22 @@ ImplementationFile=SELECTMessageDlg.cpp
 BaseClass=CDialog
 Filter=D
 LastObject=IDC_EDIT_NAME
+
+[DLG:IDD_DIALOG_ALTER]
+Type=1
+Class=CALTERDlg
+ControlCount=4
+Control1=IDOK,button,1342242817
+Control2=IDCANCEL,button,1342242816
+Control3=IDC_STATIC,static,1342308352
+Control4=IDC_EDIT_ALTER,edit,1350631552
+
+[CLS:CALTERDlg]
+Type=0
+HeaderFile=ALTERDlg.h
+ImplementationFile=ALTERDlg.cpp
+BaseClass=CDialog
+Filter=D
+VirtualFilter=dWC
+LastObject=IDC_EDIT_ALTER
 
